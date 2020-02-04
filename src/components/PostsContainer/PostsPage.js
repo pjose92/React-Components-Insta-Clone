@@ -7,18 +7,18 @@ import "./Posts.css";
 const PostsPage = (props) => {
   return (
     <div className="posts-container-wrapper">
-      {/* map through data here */}
-      {props.data.map((p) => {
-        console.log('PropsPage', p)
-        return (
-          <div>
-            <Post post={p}/>
-          </div>
-        )
-      })}
+      {/* map through data here */
+      props.post.map((item) => (
+        <Post 
+        key={item.imageUrl}
+        post={item}
+        />
+      ))
+      }
     </div>
   );
 };
 
-export default PostsPage;
 
+
+export default PostsPage;
