@@ -1,31 +1,58 @@
-.search-bar-wrapper {
-  border-bottom: 1px solid #3333;
-  height: 60px;
+.nav-bar-container{
+  height: 100px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  background: #ffffff;
-}
-.search-form {
-  width: 150px;
-  font-size: 14px;
-}
-.search-form input {
-  text-align: center;
-  color: #262626;
-}
-.image-wrapper {
-  height: 50px;
+  padding: 0rem 2rem;
 }
 
-.logo-image {
-  height: 100%;
-}
-
-.social-wrapper {
+/* this is for the branding including the logo and the name */
+.branding-container{
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo{
+  max-height: 30px;
+  max-width:30px;
+  height: 100%;
+  width: 100%;
+}
+.divider{
+  border-left:1px solid  black;
+  width: 1px;
+  height: 30px;
+  margin: 0rem 1rem;
+}
+.logo-name{
+  max-width: 100px;
+  height:auto;
+  padding-top:10px;
 }
 
-.social {
-  width: 50px;
+/*  this is for the actual search input */
+.search-input{
+  background-color:light-gray;
+  border: solid rgb(182, 182, 182);
+  border-width: 1px 1px;
+  border-radius:2px;
+  
+}
+.search-input::placeholder{
+  text-align: center;
+}
+.search-input:placeholder-shown{
+  background: url('./imgs/search.svg')  no-repeat scroll 25px;
+}
+
+/* icon container for the compass the heart and the person */
+.nav-bar-container .icon-container{
+  display: flex;
+  justify-content: space-between;
+  
+  width: 110px;
+}
+.icon{
+  max-width:25px;
+  max-height:25px;
 }

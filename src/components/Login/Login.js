@@ -19,44 +19,52 @@ const StyledForm= styled.form`
 `
 
 const InstagramLogo = styled.img`
-    height: 80px;
+    height: 90px;
 `
 
 class Login extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            username: '',
-            password: ''
+        this.state = { 
+            username:'',
+            password:''
         }
     }
 
-    changeHandler = event => {
+    // this is not dry and I would like to ask how to handle this
+    changeHandler= event=>{
         this.setState({[event.target.name]: event.target.value})
     }
 
-    submitHandler = (event) => {
+    // handles the submit an event by passing props up to app, 
+    // and passing props up to the authenticate component
+    submitHandler = (event) =>{
         event.preventDefault();
-        this.props.login(this.state.username, this.state.password)
+        this.props.login(this.state.username,this.state.password)
         this.props.toggleLogin();
     }
 
-    render() {
-        return (
+    render() { 
+        return ( 
             <LoginContainer>
-                <InstagramLogo src={logo} alt="" />
+                <InstagramLogo src={logo} alt=""/>
                 <StyledForm action="" onSubmit={this.submitHandler}>
-                    <Input 
-                        type="text"
-                        name="username"
-                        placeholder="phone number, username, or email"
+                    <Input type="text" 
+                        name="username" 
+                        placeholder="Phone number, username, or email"
                         value={this.state.username}
-                        onChange={this.changeHandler}
+                        onChange={this.changeHandler} 
+                    />
+                    <Input type="password" 
+                        name="password" 
+                        placeholder="Password"
+                        value={this.state.password}
+                        onChange={this.changeHandler} 
                     />
                     <Button primary type="submit">Log In</Button>
                 </StyledForm>
             </LoginContainer>
-        )
+        );
     }
 }
 
