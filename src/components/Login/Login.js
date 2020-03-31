@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from '../../Img/Insta.png'
 import { Button, Input } from '../../Styles/Reusables'
 import styled from 'styled-components'
+import appstore from '../../Img/appstore.png'
 
 const LoginContainer= styled.div`
     display: flex;
