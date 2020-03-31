@@ -9,6 +9,9 @@ const LoginContainer= styled.div`
     max-width:250px;
     margin: 0 auto;
     margin-top:10%;
+    border: 1px solid rgba(var(--b6a,219,219,219),1); 
+    padding: 8% 5%;
+    background-color: white;
 `
 const StyledForm= styled.form`
     padding: 5px;
